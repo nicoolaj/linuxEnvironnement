@@ -1,0 +1,80 @@
+TERMINAL_RAND_COLOR=$(( (( `date "+%N"` )  % 14) +1))
+
+CURSOR_COLOR="red"
+TERMINAL_FG_COLOR="white"
+case $TERMINAL_RAND_COLOR in
+1)
+	TERMINAL_BG_COLOR="DarkOrange1"
+	;;
+2)
+	TERMINAL_BG_COLOR="IndianRed4"
+	;;
+3)
+	TERMINAL_BG_COLOR="CornflowerBlue"
+	;;
+4)
+	TERMINAL_BG_COLOR="cyan4"
+	;;
+5)
+	TERMINAL_BG_COLOR="PeachPuff4"
+	;;
+6)
+	TERMINAL_BG_COLOR="DarkGoldenrod"
+	;;
+7)
+	TERMINAL_BG_COLOR="orange1"
+	;;
+8)
+	TERMINAL_BG_COLOR="DarkSeaGreen4"
+	;;
+9)
+	TERMINAL_BG_COLOR="ForestGreen"
+	;;
+10)
+	TERMINAL_BG_COLOR="LightPink3"
+	;;
+11)
+	TERMINAL_BG_COLOR="azure4"
+	;;
+12)
+	TERMINAL_BG_COLOR="OliveDrab4"
+	;;
+13)
+	TERMINAL_BG_COLOR="DarkSlateBlue"
+	;;
+14)
+	TERMINAL_BG_COLOR="darkblue"
+	;;
+
+32)
+	TERMINAL_BG_COLOR="darkred"
+	CURSOR_COLOR="white"
+	;;
+33)
+	TERMINAL_BG_COLOR="darkgreen"
+	;;
+34)
+	TERMINAL_BG_COLOR="purple"
+	;;
+35)
+	TERMINAL_BG_COLOR="brown"
+	;;
+36)
+	TERMINAL_BG_COLOR="DarkSlateGrey"
+	;;
+37)
+	TERMINAL_BG_COLOR="DarkOliveGreen"
+	;;
+38)
+	TERMINAL_BG_COLOR="BlueViolet"
+	;;
+39)
+	TERMINAL_BG_COLOR="AntiqueWhite4"
+	;;
+*)
+	TERMINAL_BG_COLOR="black"
+	TERMINAL_FG_COLOR="white"
+	;;
+esac
+xterm -fa Consolas.ttf -bg $TERMINAL_BG_COLOR -fg $TERMINAL_FG_COLOR -cr $CURSOR_COLOR -ms $CURSOR_COLOR
+

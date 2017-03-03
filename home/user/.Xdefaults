@@ -1,0 +1,6 @@
+XTerm*selectToClipboard:true
+XTerm*rightScrollBar: true
+XTerm*ScrollBar: true
+XTerm*scrollTtyOutput: false
+XTerm*faceName: Consolas
+XTerm*faceSize: 12
