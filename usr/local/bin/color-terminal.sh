@@ -1,3 +1,4 @@
+#@IgnoreInspection BashAddShebang
 TERMINAL_RAND_COLOR=$(( (( `date "+%N"` )  % 14) +1))
 
 CURSOR_COLOR="red"
@@ -76,5 +77,5 @@ case $TERMINAL_RAND_COLOR in
 	TERMINAL_FG_COLOR="white"
 	;;
 esac
-xterm -fa Consolas.ttf -bg $TERMINAL_BG_COLOR -fg $TERMINAL_FG_COLOR -cr $CURSOR_COLOR -ms $CURSOR_COLOR
+xterm -u8 -bg $TERMINAL_BG_COLOR -fg $TERMINAL_FG_COLOR -cr $CURSOR_COLOR -ms $CURSOR_COLOR
 

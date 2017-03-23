@@ -1,0 +1,12 @@
+XTerm*selectToClipboard:true
+XTerm*rightScrollBar: true
+XTerm*ScrollBar: true
+XTerm*scrollTtyOutput: true
+XTerm*font: terminus-14
+XTerm*faceNameDoublesize: WenQuanYi Bitmap Song
+XTerm*VT100.Translations: #override \
+                 Shift <Key>Insert:    insert-selection(CLIPBOARD) \n\
+                 Ctrl Shift <Key>V:    insert-selection(CLIPBOARD) \n\
+                 Ctrl <Key>Insert:    copy-selection(CLIPBOARD) \n\
+                 Ctrl Shift <Key>C:    copy-selection(CLIPBOARD) \n\
+
