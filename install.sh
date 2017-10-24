@@ -30,13 +30,12 @@ installation_homedir(){
 	set_bash_option "dotglob" "$status_bash_dotglob"
 }
 
-installation_debian(){
-	apt-get install -y \
-	bzip2 \
+installation_apt(){
+	sudo apt-get install -y \
+	bzip2 unzip \
 	ghostscript git-core gzip \
 	screen sshfs \
 	tar \
-	unzip \
 
 }
 
@@ -55,7 +54,7 @@ status_bash_dotglob=`get_bash_option dotglob`
 
 #### Lancement des fonctions
 installation_homedir
-installation_debian
+installation_apt
 parametrage_path
 
 #### suppression des variables globales
